@@ -1,23 +1,65 @@
+# Laravel-specific
 /vendor/
 node_modules/
 npm-debug.log
 yarn-error.log
-
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
-
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-storage/*.key
 .env
+.phpunit.result.cache
 Homestead.yaml
 Homestead.json
 /.vagrant
-.phpunit.result.cache
+
+# Cache and Log Files
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/framework/cache/*
+/storage/logs/*.log
+
+# Allow necessary storage folders
+!/storage/
+!/storage/app/
+!/storage/framework/
+!/storage/logs/
+
+# Public Storage (symlinked during setup)
+public/storage
+public/hot
+public_html/storage
+public_html/hot
+
+# IDE and Editor Files
+.idea/
+.vscode/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Dependency directories and files
+composer.phar
+
+# Node.js
+/node_modules/
+/package-lock.json
+/pnpm-lock.yaml
+/yarn.lock
+
+# Temporary files
+*.log
+*.key
+
+# Docker
+docker-compose.override.yml
+
+# Debugging or profiling data
+/.phpstorm.meta.php
+
+# CI/CD artifacts
+/.env.testing
+/.env.dusk.local
+
+# Other
+*.sql
+*.sqlite
+*.tar.gz
+*.zip
